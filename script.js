@@ -1,9 +1,15 @@
-const button = document.getElementById("beginBtn");
+window.addEventListener("load",()=>{
 
-button.addEventListener("click", function () {
+setTimeout(()=>{
 
-    button.innerHTML = "❤️ Preparing Your Surprise...";
+document.getElementById("loader").style.opacity="0";
 
-    button.disabled = true;
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},1000);
+
+},3000);
 
 });
