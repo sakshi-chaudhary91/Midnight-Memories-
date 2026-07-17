@@ -4,10 +4,13 @@ padding:0;
 box-sizing:border-box;
 }
 body{
-background:linear-gradient(180deg,#080808,#14060b);
-font-family:Arial,Helvetica,sans-serif;
-color:white;
-overflow:hidden;
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top,#2d0b16 0%,#080808 60%);
+    color:white;
+    overflow-x:hidden;
 }
 
 .hero{
