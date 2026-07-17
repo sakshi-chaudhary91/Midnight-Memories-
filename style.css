@@ -1,86 +1,88 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-
 body{
-
-    background:#080808;
-    color:white;
-
-    font-family:Arial, Helvetica, sans-serif;
-
+background:linear-gradient(180deg,#080808,#14060b);
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+overflow:hidden;
 }
 
 .hero{
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-direction:column;
-
-    text-align:center;
-
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
+.hero-content{
+max-width:700px;
+}
 h1{
-
-    font-size:60px;
-
-    color:#FF4D6D;
-
+font-size:70px;
+animation:heartbeat 1.5s infinite;
 }
 
 h2{
+font-size:60px;
+margin-top:20px;
+color:#ff4d6d;
+}
 
-    margin-top:20px;
-
-    font-size:40px;
-
+h3{
+margin-top:15px;
+font-size:30px;
+font-weight:normal;
 }
 
 p{
-
-    margin-top:20px;
-
-    color:#cccccc;
-
-    font-size:20px;
-
+margin-top:30px;
+font-size:20px;
+line-height:35px;
+color:#d7d7d7;
 }
 
 button{
-
-    margin-top:40px;
-
-    padding:15px 40px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#FF4D6D;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+margin-top:45px;
+padding:16px 40px;
+font-size:20px;
+background:#ff4d6d;
+border:none;
+border-radius:50px;
+color:white;
+cursor:pointer;
+transition:.3s;
 
 }
 
 button:hover{
+transform:scale(1.08);
+background:#ff2b57;
+box-shadow:0 0 25px #ff4d6d;
+}
 
-    background:#ff1f52;
+@keyframes heartbeat{
 
-    transform:scale(1.08);
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
 
 }
