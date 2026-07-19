@@ -1,47 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Memories ❤️</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-    <div id="loader">
-    <div class="loader-content">
-        <div class="heart">❤️</div>
-        <h2>Preparing Your Birthday Experience</h2>
-        <div class="loading-bar">
-            <div class="progress"></div>
-        </div>
-        <p>Loading...</p>
-    </div>
-</div>
+    <div id = "progressBar"></div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>❤️</h1>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-heart">❤️</div>
             <h2>Midnight Memories</h2>
-            <h3>Happy Birthday 🎂</h3>
-            <p>
-                Every great story begins with a single moment...
-            <br>
-            Today is all about celebrating you. ❤️
+            <p class="loader-text">
+                Preparing your surprise...
             </p>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id = "hearts-container"></div>
+    <div class = "shooting-stars"></div>
+    <div id = "cursorGlow"></div>
+
+    <!-- =============== BACKGROUND =============== -->
+
+    <div class="gradient-bg"></div>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+
+    <!-- =============== HERO SECTION =============== -->
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-heart">
+                ❤️
+            </div>
+            <h1>
+                Midnight Memories
+            </h1>
+            <h3>
+                A Birthday Story Written In Moments
+            </h3>
+
+            <p>
+                Some people become memories.
+
+                <br>
+
+                Some become home.
+
+            </p>
+
             <button id="beginBtn">
-                Begin Journey
+                Begin Journey →
             </button>
+        </div>
+    </section>
+
+    <!-- =============== WARNING =============== -->
+
+    <section id="warning" class="hidden">
+        <div class="warning-card">
+            <h2>
+                Before We Begin...
+            </h2>
+            <p class="warning-sub">
+                This little experience contains
+            </p>
+            <div class="warning-list">
+                <div>
+                    ❤️ Beautiful Memories
+                </div>
+                <div>
+                    😂 Inside Jokes
+                </div>
+                <div>
+                    🎂 Birthday Wishes
+                </div>
+
+                <div>
+                    🥹 A Few Emotional Moments
+                </div>
+
+            </div>
+            <button id="readyBtn">
+                Continue →
+            </button>
+        </div>
+    </section> 
+
+    <!-- Happy Birthday -->
+
+    <section id="birthday" class="hidden">
+        <div class="birthday-card">
+            <h1>🎂</h1>
+            <h2>Happy Birthday!</h2>
+             <p class="birthday-text">
+                To someone who unknowingly made
+                so many ordinary days
+                feel special.
+            </p>
+            <p id="typing"></p>
+            <button id="storyBtn">
+
+            Our Story →
+
+            </button>
+        </div>
+    </section>
+    <!-- ================= OUR STORY ================= -->
+
+    <section id="story" class="hidden">
+        <div class="story-card">
+            <span class="chapter">Chapter 1</span>
+            <h2>Our Story</h2>
+            <p class="story-line">
+                 Every beautiful friendship begins with a simple hello.
+            </p>
+            <div class="story-photo">
+            <img src="assets/images/story1.jpeg" alt="Our Story">
+             </div>
+            <p class="story-caption">
+                 "Little did we know this moment would become a beautiful memory."
+            </p>
+             <button id="galleryBtn">
+                 Continue →
+             </button>
+        </div>
+    </section>
+
+    <!-- ================= MEMORY GALLERY ================= -->
+
+    <section id="gallery" class="hidden">
+        <div class="gallery-card">
+            <span class="chapter">Chapter 2</span>
+            <h2>Memory Gallery</h2>
+            <p class="gallery-subtitle">
+                Every picture hides a beautiful story.
+            </p>
+            <div class="gallery-image">
+                 <img id="galleryImage"
+                 src="assets/images/photo1.jpeg"
+                 alt="Memory">
+            </div>
+            <p id="galleryCaption">
+                 "One of my favourite memories."
+            </p>
+            <p id = "photoCounter" >1 / 5</p>
+            <div class="gallery-buttons">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+            <button id="timelineBtn" class="hidden">
+                Continue Our Journey →
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+
+    <section id="timeline" class="hidden">
+        <div class="timeline-card">
+             <span class="chapter">Chapter 3</span>
+             <h2>Our Journey</h2>
+             <p class="timeline-subtitle">
+                 Every memory has a story.
+             </p>
+             <div class="timeline">
+                <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-content">
+                     <h3>🌸 The First Hello</h3>
+                      <p>
+                          Every beautiful friendship begins with
+                        a simple "Hi".
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+
+                <div class="timeline-content">
+                    <h3>😂 Endless Laughs</h3>
+
+                    <p>
+                        Some conversations become memories
+                        without us realizing it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+
+                <div class="timeline-content">
+                    <h3>📸 Countless Memories</h3>
+
+                    <p>
+                        Every picture reminds me
+                        how lucky I am to know you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+
+                <div class="timeline-content">
+                    <h3>🎂 Today</h3>
+
+                    <p>
+                        Today is all about celebrating
+                        the amazing person you are.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="reportBtn">
+            Continue →
+        </button>
 
         </div>
 
     </section>
 
+    <!-- ================= AI REPORT ================= -->
+
+    <section id="report" class="hidden">
+        <div class="report-card">
+            <span class="chapter">Chapter 4</span>
+            <h2>Ai Best Friend Report</h2>
+            <p class="report-subtitle">
+                 Running personality analysis...
+            </p>
+            <div class="scan-box">
+                 <div class="scan-item">
+                     <span>Kindness ❤️</span>
+                     <div class="bar">
+                    <div class="fill fill1"></div>
+                 </div>
+                  <span>100%</span>
+                </div>
+                 <div class="scan-item">
+                     <span>Humour 😂</span>
+                      <div class="bar">
+                         <div class="fill fill2"></div>
+                        </div>
+                        <span>98%</span>
+                    </div>
+                    <div class="scan-item">
+                        <span>Support 🤝</span>
+                        <div class="bar">
+                              <div class="fill fill3"></div>
+                        </div>
+                        <span>100%</span>
+                    </div>
+                     <div class="scan-item">
+                        <span>Late Replies 📱</span>
+                        <div class="bar">
+                            <div class="fill fill4"></div>
+                        </div>
+                         <span>72%</span>
+                        </div>
+                    </div>
+                    <div class="final-result">
+                         🏆 Certified Result
+                    <h3>
+                          World's Best Friend ❤️
+                    </h3>
+                 </div>
+                 <button id="jokesBtn">
+                     Continue →
+                 </button>
+                </div>
+    </section>
+     
+    <!-- ================= INSIDE JOKES ================= -->
+
+    <section id="jokes" class="hidden">
+        <div class="jokes-card">
+            <span class="chapter">Chapter 5</span>
+             <h2>Inside Jokes 😂</h2>
+              <p class="jokes-subtitle">
+                 Only legends will understand these...
+              </p>
+              <div class="joke-box">
+                 <h3>😂 Joke #1</h3>
+              <p>
+                Replace this with your funniest inside joke.
+              </p>
+              </div>
+
+              <div class="joke-box">
+              <h3>🤣 Joke #2</h3>
+              <p>
+                Something only both of you understand.
+              </p>
+        </div>
+         <div class="joke-box">
+            <h3>😅 Joke #3</h3>
+            <p>
+                One unforgettable funny moment.
+            </p>
+        </div>
+
+        <button id="letterBtn">
+            Continue →
+        </button>
+        </div>
+    </section>
+
+    <!-- ================= LETTER ================= -->
+
+    <section id="letter" class="hidden">
+        <div class="letter-card">
+             <span class="chapter">Chapter 6</span>
+              <h2>A Letter For You 💌</h2>
+              <p class="letter-subtitle">
+                 Some words are easier to write than to say...
+              </p>
+               <div class="letter-box">
+                 <p id="letterText">
+                 </p>
+              </div>
+              <button id="surpriseBtn">
+                 One Last Surprise →
+              </button>
+         </div>
+    </section>
+
+<!-- ================= FINAL SURPRISE ================= -->
+
+    <section id="surprise" class="hidden">
+         <div class="surprise-card">
+             <span class="chapter">
+                 Final Chapter
+             </span>
+             <h2>
+                 One Last Surprise...
+             </h2>
+         <div class="gift-box">
+             🎁
+         </div>
+         <p class="surprise-text">
+             Click the gift.
+         </p>
+         <button id="openGift">
+            Open Gift ❤️
+         </button>
+        </div>
+    </section>
+
+    <!-- ================= ENDING ================= -->
+
+    <section id="ending" class="hidden">
+        <div class="ending-card">
+            <h1>❤️</h1>
+            <h2>Happy Birthday</h2>
+            <h3>Your Name</h3>
+        <div class="letter">
+             <h2>💌 One Last Message</h2>
+             <p id="finalLetterText"></p>
+        </div>
+        <button id="restartBtn">
+             Watch Again ↻
+        </button>
+
+        <p class = "footer-note">
+            Every page of this website was made with love.❤️
+        </p>
+
+        </div>
+    </section>>
+    <!-- Music -->
+
+    <audio id="bgMusic" loop >
+        <source src="assets/music/birthday.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicBtn">
+        🎵 Play Music
+    </button>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 
 </body>
